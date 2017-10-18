@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .mt-0 {
+            margin-top: 20px !important;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -16,7 +22,7 @@
             <h1 class="text-center"><b>Form</b></h1>
         </h3>
 
-        <form>
+        <form action="http://www.aptweblab.org/request" method="post">
             <div class="form-group">
                 <label for="usr">Name:</label>
                 <input type="text" class="form-control" id="usr" name="user_name">
@@ -27,12 +33,64 @@
 
 
             </div>
-
-
-            <div class="radio">
-                <label class="radio-inline"><input type="radio" name="optradio">Freshman</label>
-                <label class="radio-inline"><input type="radio" name="optradio">Sophomore</label>
-                <label class="radio-inline"><input type="radio" name="optradio">Junior</label>
-                <label class="radio-inline"><input type="radio" name="optradio">Senior</label>
+            <div class="form-group text-center mt-0 ">
+                <label for="comment"><h4><b>Why is Mr.Temple's APCSP Class the best class in the world?</b></h4></label>
+                <textarea class="form-control" rows="12" id="comment"></textarea>
             </div>
+
+            <div class="radio text-center mt-0">
+                <h4 class="text-center"><b>What grade are you in?</b></h4>
+                <label class="radio-inline"><input type="radio" name="grade[]"value="freshman">Freshman</label>
+                <label class="radio-inline"><input type="radio"
+                name="grade[]"value="sophomore">Sophomore</label>
+                <label class="radio-inline"><input type="radio" name="grade[]"value="junior">Junior</label>
+                <label class="radio-inline"><input type="radio" name="grade[]"value="senior">Senior</label>
+            </div>
+
+            <div class="form-group text-center mt-0">
+                <h4><b>What is your favorite Ice Cream flavor?</b></h4>
+                <select class="form-control" name="flavors[]">
+                <option>I'm Vegan</option>
+                    <option>Vanilla</option>
+                <option>Chocolate</option>
+                    <option>Coffee</option>
+                <option>Salted Caramel</option>
+                    <option>Chunky Monkey</option>
+                </select>
+            </div>
+
+
+            <div class="text-center mt-0">
+                <h4><b>Who do you think you are, Mister?</b></h4>
+
+
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="person_type[]" value="dog">I'm a dog person
+
+                </label>
+
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="person_type[]" value="cat">I'm a cat person
+                </label>
+
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="person_type[]" value="shark">I'm a shark person
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="person_type[]" value="chicken"> I'm a chicken person
+
+                </label>
+
+
+            </div>
+
+
+
+            <div class="col-md-12 text-center mt-0 ">
+                <button type="submit" class="btn btn-success">SUBMIT</button>
+            </div>
+        </form>
     </div>
+</body>
+
+</html>
